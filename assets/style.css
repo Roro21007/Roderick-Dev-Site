@@ -1,6 +1,8 @@
 :root {
-    --(variable color)
-    --(variable color)
+    --gold: rgba(188, 164, 29, 0.647);
+    --silver: rgba(192, 192, 192, 0.815);
+    --green: rgb(22, 210, 22);
+    --blue: rgb(31, 31, 174);
 }
 
 * {
@@ -8,55 +10,102 @@
 }
 
 body {
-    font-family: ;
+    font-family: Helvetica, serif;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100px;
+    justify-content: center;
+}
+
+header {
+    padding: 40px;
+    text-align: center;
+    background: var(--gold);
+    color: black;
+}
+
+nav {
+    display: flex;
+    background-color: white;
+    color: black;
+    padding: 14px 20px 20px;
+    text-decoration: none;
+    text-align: center;
 }
 
 main {
     display: flex;
     flex-wrap: wrap;
-    margin-top: %;
+    flex-grow: 1;
 }
 
-nav {
-    display: flex;
-    background-color: color;
+aside {
+    flex: 1;
+    background-color: var(--silver);
+    padding: 10px;
+    text-align: left;
 }
 
-.main-header (
+footer {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background: var(--silver);
+    color: black;
+}
+
+/*.main-header {
     display: flex;
     justify-content: space-between;
-    padding: px;
-    background: color;
-    color: color;
-)
+    padding: 20px;
+    background: green;
+    color: white;
+}*/
+
+.work {
+    flex; 4;
+    background-color: var(--silver);
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
 
 .challenge {
-    flex; 1 0 px;
-    padding: px;
-    text-align: center;
     border-style: solid;
-    border-width: 1px;
-    transform: rotate (10deg)
+    border-width: 2px;
+    border-radius: 50px;
+    padding: 10px;
+    flex: 1 0 300px;
+    transform: rotate(5deg);
+    box-shadow: 10px 10px 5px rgb(61, 53, 53);
+    margin: 20px;
 }
 
 .challenge header {
-    padding: px;
-    background: color;
-    color: color;
+    border-radius: 50px 50px 0px 0px;
+    padding: 20px;
 }
 
 .challenge.one {
-    flex: 2 1 px;
+    flex: 2 1 20px;
 }
 
+.challenge p {
+    text-align: center;
+}
 
+.challenge img {
+    width: 100%;
+}
 
 @media screen and (max-width: 760px) {
     header {
-        background: color;
+        background-color: var(--green);
     }
-    img {
-        background-color: color;
+    aside {
+        background-color: var(--blue);
     }
 }
